@@ -1,6 +1,12 @@
 package no.ntnu.idatg2003;
 
+/**
+ * Main application class for demonstrating text manipulation commands.
+ */
 public class App {
+    /**
+     * Entry point for the application.
+     */
     public static void main(String[] args) {
         String text = "the quick brown fox\njumps over the lazy dog";
 
@@ -38,5 +44,6 @@ public class App {
         script.addCommand(new CapitalizeWordsTextCommand());
         script.addCommand(new WrapLinesTextCommand("<li>", "</li>"));
         System.out.println("Script (Replace, CapitalizeWords, WrapLines): " + script.execute(text));
+
     }
 }
