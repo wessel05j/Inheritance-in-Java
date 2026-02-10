@@ -34,6 +34,9 @@ public class Script implements TextCommand {
      */
     @Override
     public String execute(String text) {
+        if (text == null || text.isEmpty()) {
+            return text;
+        }
         String result = text;
         for (TextCommand command : commands) {
             result = command.execute(result);

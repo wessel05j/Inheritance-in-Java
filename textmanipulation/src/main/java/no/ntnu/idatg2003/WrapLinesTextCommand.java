@@ -24,6 +24,9 @@ public class WrapLinesTextCommand extends WrapTextCommand {
      */
     @Override
     public String execute(String text) {
+        if (text == null || text.isEmpty()) {
+            return text;
+        }
         String[] lines = text.split("\n");
 
         for (int i = 0; i < lines.length; i++) {

@@ -25,6 +25,9 @@ public class CapitalizeSelectionTextCommand extends CapitalizeTextCommand {
      */
     @Override
     public String execute(String text) {
+        if (text == null || text.isEmpty() || selection == null || selection.isEmpty()) {
+            return text;
+        }
         String capitalizedSelection = super.execute(selection);
         return text.replace(selection, capitalizedSelection);
     }

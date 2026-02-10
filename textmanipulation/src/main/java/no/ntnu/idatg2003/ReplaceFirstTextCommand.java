@@ -24,6 +24,9 @@ public class ReplaceFirstTextCommand extends ReplaceTextCommand {
      */
     @Override
     public String execute(String text) {
+        if (text == null || text.isEmpty() || target.isEmpty()) {
+            return text;
+        }
         return text.replaceFirst(target, replacement);
     }
 }

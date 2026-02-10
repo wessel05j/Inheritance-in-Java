@@ -13,6 +13,9 @@ public class CapitalizeWordsTextCommand extends CapitalizeTextCommand {
      */
     @Override
     public String execute(String text) {
+        if (text == null || text.isEmpty()) {
+            return text;
+        }
         String[] words = text.split(" ");
         StringBuilder capitalizedText = new StringBuilder();
 

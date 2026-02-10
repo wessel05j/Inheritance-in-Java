@@ -27,6 +27,9 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
      */
     @Override
     public String execute(String text) {
+        if (text == null || text.isEmpty() || selection == null || selection.isEmpty()) {
+            return text;
+        }
         return text.replace(selection, opening + selection + end);
     }
 

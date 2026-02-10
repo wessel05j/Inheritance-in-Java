@@ -8,25 +8,25 @@ import org.junit.Test;
  */
 public class AppTest {
 
-    @Test
+    @AppTest
     public void testReplaceTextCommand() {
         ReplaceTextCommand cmd = new ReplaceTextCommand("cat", "dog");
         assertEquals("The dog sat on the mat.", cmd.execute("The cat sat on the mat."));
     }
 
-    @Test
+    @AppTest
     public void testReplaceFirstTextCommand() {
         ReplaceFirstTextCommand cmd = new ReplaceFirstTextCommand("cat", "dog");
         assertEquals("dog cat cat", cmd.execute("cat cat cat"));
     }
 
-    @Test
+    @AppTest
     public void testWrapTextCommand() {
         WrapTextCommand cmd = new WrapTextCommand("<b>", "</b>");
         assertEquals("<b>hello</b>", cmd.execute("hello"));
     }
 
-    @Test
+    @AppTest
     public void testWrapLinesTextCommand() {
         WrapLinesTextCommand cmd = new WrapLinesTextCommand("<li>", "</li>");
         String input = "a\nb\nc";
